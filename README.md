@@ -24,8 +24,8 @@ This is a solution to the [Interactive card details form challenge on Frontend M
 
 ### Links
 
-- Solution URL: [Solution URL](https://github.com/KrishnaVishwakarma1595/interactive-rating-component)
-- Live Site URL: [Live URL](https://krishnavishwakarma1595.github.io/interactive-rating-component/)
+- Solution URL: [Solution URL](https://github.com/KrishnaVishwakarma1595/interactive-card-details-form)
+- Live Site URL: [Live URL](https://krishnavishwakarma1595.github.io/interactive-card-details-form/)
 
 ## My process
 
