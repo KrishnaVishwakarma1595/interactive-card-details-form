@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+:root{
+    /* PRIMARY COLORS */
+    --active-input-border: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --input-error: hsl(0, 100%, 66%);
+    /* NEUTRAL */
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --dark-violet: hsl(278, 68%, 11%);
+}
+
+html, body{ min-height: 100vh; }
+
+body{
+    background-color: var(--white);
+}
+
+button{ 
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.d-flex{
+    display: flex;
+    flex-direction: row;
+}
+
+.d-inline-block{ display: inline-block; }
+.flex-column { flex-direction: column; }
+.justify-content-between { justify-content: space-between; }
+.align-items-center{ align-items: center;}
+
+.attribution{    
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    text-align: center;
+    width: auto;
+    color: var(--dark-blue);
+    font-weight: 300;
+}
+
+.attribution a{
+    color: hsl(278, 94%, 30%);
+}
+
+.left-section img{
+    width: 483px;
+    max-height: 100vh;
+}
+
+.cara-details-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.right-section {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+#card-details-form {
+    width: 350px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 20px;
+}
+
+#card-details-form label{
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--dark-violet);
+    text-transform: uppercase;    
+    letter-spacing: 1.5px;
+}
+
+#card-details-form input{
+    border: 1px solid var(--light-grayish-violet);
+    border-radius: 8px;
+    padding: 8px 12px;
+    height: 40px;
+    font-size: 16px;
+    color: var(--dark-violet);
+    font-weight: 600;
+}
+
+#card-details-form input:focus{
+    outline: none;
+    border: 1px solid hsl(278, 94%, 30%);
+}
+
+#card-details-form input::placeholder{
+    color: hsl(300,2%,79%);
+    font-weight: 500;
+    font-weight: 18px;
+}
+
+#card-details-form .errorState{
+    border-color: var(--input-error);
+}
+
+.card-exp-inputs{
+    display: grid;
+    grid-template-columns: auto 185px;
+}
+
+#exp_date_month, #exp_date_year{
+    width: 70px;
+}
+
+.form-action-btn{
+    border: none;
+    height: 44px;
+    padding: 8px 12px;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 8px;
+    background-color: var(--dark-violet);
+    margin-top: 15px;
+}
+
+.error-state{
+    color: var(--input-error);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.floating-card-front {
+    position: absolute;
+    left: 204px;
+    top: 130px;
+    background: url(./images/bg-card-front.png);
+    width: 390px;
+    background-repeat: no-repeat;
+    height: 220px;
+    background-size: 100% 100%;
+    padding: 30px;
+    display: grid;
+    grid-template-rows: auto 70px;
+    color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px hsla(278, 68%, 11%, 0.3);
+    -webkit-box-shadow: 0px 0px 20px 0px hsla(278, 68%, 11%, 0.3);
+    -moz-box-shadow: 0px 0px 20px 0px hsla(278, 68%, 11%, 0.3);
+}
+
+.card-number{
+    font-size: 24px;
+    display: flex;
+    column-gap: 10px;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+}
+
+.card-holder-details span{
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.floating-card-back{
+    position: absolute;
+    left: 275px;
+    top: 390px;
+    background: url(./images/bg-card-back.png);
+    width: 390px;
+    background-repeat: no-repeat;
+    height: 220px;
+    background-size: 100% 100%;
+    padding: 30px;
+    display: grid;
+    grid-template-rows: auto 70px;
+    color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px hsla(278, 68%, 11%, 0.3);
+    -webkit-box-shadow: 0px 0px 20px 0px hsla(278, 68%, 11%, 0.3);
+    -moz-box-shadow: 0px 0px 20px 0px hsla(278, 68%, 11%, 0.3);
+}
+
+.floating-card-back span {
+    position: absolute;
+    top: 98px;
+    right: 50px;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+}
+
+.final-state{
+    width: 350px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.thank-you{
+    font-size: 24px;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+    margin-top: 30px;
+    text-transform: uppercase;
+    color: var(--dark-violet);
+}
+
+.thanks-msg{
+    font-size: 16px;
+    color: var(--dark-grayish-violet);
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.continue-btn{
+    border: none;
+    height: 44px;
+    width: 100%;
+    padding: 8px 12px;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 8px;
+    background-color: var(--dark-violet);
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 1440px) {    
+    .floating-card-front{
+        top: 100px;
+    }
+    .floating-card-back{
+        top: 360px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {    
+    .floating-card-front,.floating-card-back{
+       left: 130px;
+    }    
+}
+
+@media only screen and (max-width: 992px) {    
+    .left-section img {
+        width: 283px;
+        max-height: 100vh;
+        min-height: 100vh;
+    }
+    .attribution{
+        left: 40%;
+    }
+    .floating-card-front{
+        grid-template-rows: auto 30px;
+    }
+    .floating-card-front,.floating-card-back{
+        width: 280px;
+        height: 150px;
+        left: 50px;
+    }  
+    .card-number{
+        font-size: 15px;
+    }
+    .floating-card-back span {    
+        top: 65px;
+        right: 40px;
+    }
+}
+
+@media only screen and (max-width: 768px) {    
+    .cara-details-container{
+        grid-template-columns: auto;
+    }
+    .left-section img{
+        width: 100%;
+        min-height: 240px;
+        max-height: 240px;
+    }
+    .attribution{
+        position: relative;
+        bottom: unset;
+        left: unset;
+        margin-top: 40px;
+    }
+    #card-details-form, .final-state{
+        margin-top: 100px;
+    }
+    .floating-card-front{
+        left: 50%;
+        top: 144px;
+        z-index: 1;
+        transform: translate(-70%);
+    }
+    .floating-card-back{
+        top: 32px;
+        left: 50%;
+        transform: translate(-30%);
+    }
+}
+
+@media only screen and (max-width: 400px) {    
+    .floating-card-front{
+        transform: translate(-175px);
+    }
+    .floating-card-back{    
+        transform: translate(-40%);
+    }
+}
